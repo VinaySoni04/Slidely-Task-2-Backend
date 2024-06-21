@@ -1,23 +1,38 @@
 # SlidelyAI-Clone-Google-Form-Task Frontend Part
 
-# Follow these steps to run the frontend part of the application:
+# Follow these steps to run the application:
 
 1. Prerequisites
-   1. Ensure you have Visual Studio installed. If not, download and install it from Visual Studio Downloads.
-   2. Clone the repository containing the frontend code from GitHub.
-  
-2. Opening the Project
-   1. Open Visual Studio.
-   2. Click on File -> Open -> Project/Solution.
-   3. Navigate to the directory where you cloned the repository and select the solution file.
-    
-3. Restoring NuGet Packages
-   1. Once the project is loaded, right-click on the solution in the Solution Explorer.
-   2. Select Restore NuGet Packages to ensure all necessary packages are installed.
+   1. Ensure you have Node.js installed on your machine. You can download it from nodejs.org.
+   2. Clone the repository containing the backend code from GitHub.
    
-4. Setting up the Project
-   1. Build the project to ensure all dependencies are resolved and the project compiles without errors.
+2. Setup Dependencies
+   1. Open your terminal or command prompt.
+   2. Navigate to the directory where your backend code is located (where your package.json file is).
+
+3. Install Node Modules
+   1. Run the following command to install dependencies specified in package.json:
+
+         npm install
+
+4. Start the Server
+   1. After installing dependencies, start the backend server by running:
+
+         npm start
    
-5. Running the Application
-   1. Set the startup project (right-click on the desired project in the Solution Explorer -> Set as Startup Project).
-   2. Press F5 or click on Start in the toolbar to run the application.
+      This command will compile TypeScript files (*.ts), if necessary, and start the server defined in src/index.ts.
+
+5. Verify Server is Running
+   1. Once started, verify that the server is running correctly. You should see output indicating that the server has started and is listening on a specific port (often localhost:3000 by default).
+
+6. Endpoints Overview
+   The backend provides the following endpoints:
+   1. /ping: GET request that always returns true. 
+   2. /submit: POST request to submit data (name, email, phone, github_link, stopwatch_time) to the backend.
+   3. /readAll: GET request with a query parameter index (0-index) to read a specific form submission.
+
+7. Testing Endpoints
+   1. Use tools like Postman or curl to test the API endpoints after starting the server.
+
+8. Stopping the Server
+   1. To stop the server, press Ctrl + C in the terminal where the server is running.
